@@ -1,4 +1,5 @@
 import React from "react";
+import './TodayWeather.css';
 
 function TodayWeather() {
     return (

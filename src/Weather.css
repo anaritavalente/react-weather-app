@@ -1,0 +1,59 @@
+  
+.Weather .h1-todayweather {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.Weather .buttoncurrentcity {
+    background-color: #37474f;
+    border: transparent;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: white;
+}
+    
+.Weather.buttoncurrentcity:hover,
+  .buttonsearch:hover {
+    background-color: rgb(76, 146, 146);
+}
+
+.Weather #square1 {
+    position: relative;
+    left: 15px;
+    width: 455px;
+    height: 155px;
+    background-color: rgb(76, 146, 146);
+    border-radius: 4px;
+}
+  
+.Weather .todayweather .icon {
+    margin-left: 15px;
+}
+  
+.Weather #temp {
+    display: inline;
+    position: relative;
+    top: 20px;
+    font-size: 60px;
+}
+  
+.Weather #description {
+    margin-left: 15px;
+    text-transform: capitalize;
+}
+  
+.Weather #humidity, #wind {
+    font-size: 18px;
+}
+  
+.Weather .fa-tint, .fa-wind {
+    position: relative;
+    margin-right: 8px;
+    margin-top: 42px;
+    font-size: 22px;
+}
+  
+.Weather .fa-wind {
+    margin-top: 12px;
+}

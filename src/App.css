@@ -1,0 +1,51 @@
+.App body {
+    font-family: "Noto Sans", sans-serif;
+    margin-top: 15px;
+    color: white;
+}
+  
+.App .today-block {
+    height: 550px;
+    border: 1px solid #7fbbb3;
+    border-radius: 2px;
+    background-color: #7fbbb3;
+    color: white;
+    width: 540px;
+    margin: 10px 0 0 265px;
+    padding: 30px 40px;
+}
+  
+.App .buttoncurrentcity {
+    background-color: #37474f;
+    border: transparent;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: white;
+}
+    
+.App .buttoncurrentcity:hover,
+  .buttonsearch:hover {
+    background-color: rgb(76, 146, 146);
+}
+
+.App .city_hour_day {
+    margin-top: 70px;
+}
+  
+.App #city, #hour, .fa-map-marker-alt {
+    display: inline;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+  
+.App #day {
+    font-size: 20px;
+    margin-top: 8px;
+}
+  
+.App footer {
+    margin: 7px 0 0 280px;
+    color: #37474f;
+}
+  
