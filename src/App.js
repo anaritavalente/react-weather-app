@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="row">
-        <Weather />
+        <Weather cityDefault="Lisbon"/>
         <Forecast />
         <footer>
           <a href="https://github.com/anaritavalente/weather-react" target="_blank"> Open-sourced project </a> coded by Ana Rita Valente

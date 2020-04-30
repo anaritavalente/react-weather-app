@@ -15,18 +15,6 @@
     padding: 30px 40px;
 }
   
-.App .buttoncurrentcity {
-    background-color: #37474f;
-    border: transparent;
-    border-radius: 5px;
-    padding: 8px 10px;
-    color: white;
-}
-    
-.App .buttoncurrentcity:hover,
-  .buttonsearch:hover {
-    background-color: rgb(76, 146, 146);
-}
 
 .App .city_hour_day {
     margin-top: 70px;
