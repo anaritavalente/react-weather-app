@@ -1,7 +1,7 @@
 import React from 'react';
-import './FormatedCityandTime.css';
+import './CityandTime.css';
 
-function FormatedCityandTime(props) {
+function CityandTime(props) {
 
     let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -16,13 +16,13 @@ function FormatedCityandTime(props) {
     if (hours < 10) hours = `0${hours}`;
 
     return(
-        <div className="FormatedCityandTime">
+        <div className="CityandTime">
             <i className="fas fa-map-marker-alt" />
-            <p id="city"> {props.cityDefault} </p>
+            <p id="city"> {props.city} </p>
             <p id="time"> {hours}:{minutes}</p>
             <p id="date"> {weekday}, {day} {month} {year}</p>
         </div> 
     );
 }
 
-export default FormatedCityandTime;
+export default CityandTime;

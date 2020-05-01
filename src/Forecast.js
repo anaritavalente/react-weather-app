@@ -1,7 +1,7 @@
 import React from "react";
 import './Forecast.css';
 
-export default function Forecast(){
+function Forecast(){
     return (
         <div className="Forecast">
             <div className="col-5">
@@ -75,3 +75,4 @@ export default function Forecast(){
         </div>
       );
     }
+export default Forecast;

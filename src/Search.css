@@ -1,4 +1,4 @@
-.Search .buttonsearch {
+.TodayWeather .buttonsearch {
     position: relative;
     left: 25px;
     background-color: #37474f;
@@ -8,7 +8,7 @@
     color: white;
 }
   
-.Search .entercity {
+.TodayWeather .entercity {
     position: relative;
     left: 20px;
     width: 60%;

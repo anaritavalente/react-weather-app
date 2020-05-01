@@ -1,11 +1,11 @@
   
-.Weather .h1-todayweather {
+.TodayWeather .h1-todayweather {
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 35px;
 }
 
-.Weather .buttoncurrentcity {
+.TodayWeather .buttoncurrentcity {
     background-color: #37474f;
     border: transparent;
     border-radius: 5px;
@@ -13,21 +13,32 @@
     color: white;
 }
     
-.Weather .buttoncurrentcity:hover,
+.TodayWeather .buttoncurrentcity:hover,
   .buttonsearch:hover {
     background-color: rgb(76, 146, 146);
 }
 
-.Weather .city_hour_day {
-    margin-top: 70px;
+.TodayWeather .buttonsearch {
+    position: relative;
+    left: 25px;
+    background-color: #37474f;
+    border: transparent;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: white;
 }
- 
-.Weather #city {
-    display: inline;
+  
+.TodayWeather .entercity {
+    position: relative;
+    left: 20px;
+    width: 60%;
+    border: 1.5px solid rgb(76, 146, 146);
+    border-radius: 8px;
+    padding: 8px 8px;
+    text-align: left;
 }
 
-
-.Weather #square1 {
+.TodayWeather #square1 {
     position: relative;
     left: 15px;
     width: 455px;
@@ -36,33 +47,33 @@
     border-radius: 4px;
 }
   
-.Weather .todayweather .icon {
+.TodayWeather .todayweather .icon {
     margin-left: 15px;
 }
   
-.Weather #temp {
+.TodayWeather #temp {
     display: inline;
     position: relative;
     top: 20px;
     font-size: 60px;
 }
   
-.Weather #description {
+.TodayWeather #description {
     margin-left: 15px;
     text-transform: capitalize;
 }
   
-.Weather #humidity, #wind {
+.TodayWeather #humidity, #wind {
     font-size: 18px;
 }
   
-.Weather .fa-tint, .fa-wind {
+.TodayWeather .fa-tint, .fa-wind {
     position: relative;
     margin-right: 8px;
     margin-top: 42px;
     font-size: 22px;
 }
   
-.Weather .fa-wind {
+.TodayWeather .fa-wind {
     margin-top: 12px;
 }
