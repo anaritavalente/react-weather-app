@@ -1,7 +1,7 @@
 import React from "react";
 import './Search.css';
 
-function Search(){
+export default function Search(){
     return(
         <div className="Search">
             <form>
@@ -17,5 +17,3 @@ function Search(){
         </div>
     );
 }
-
-export default Search;

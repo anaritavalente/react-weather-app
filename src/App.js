@@ -1,8 +1,7 @@
 import React from 'react';
-import './App.css';
 import Weather from "./Weather";
 import Forecast from "./Forecast";
-
+import './App.css';
 
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
         <Weather cityDefault="Lisbon"/>
         <Forecast />
         <footer>
-          <a href="https://github.com/anaritavalente/weather-react" target="_blank"> Open-sourced project </a> coded by Ana Rita Valente
+          <a href="https://github.com/anaritavalente/weather-react" target="_blank"> Open-source project </a> coded by Ana Rita Valente
         </footer>
       </div>
     </div>

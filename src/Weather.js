@@ -2,16 +2,17 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import Search from './Search';
 import Units from './Units';
+import FormatedCityandTime from './FormatedCityandTime';
 
 import './Weather.css';
 
-export default function Weather(props) {
+function Weather(props) {
     const [WeatherData, setWeatherData] = useState({ready: false});
 
     function handleSubmit(response) {
-        console.log(response.data.main.temp);
         setWeatherData({
             ready: true,
+            date: new Date (response.data.dt*1000),
             temperature: response.data.main.temp, 
             wind: response.data.wind.speed, 
             humidity: response.data.main.humidity, 
@@ -39,12 +40,9 @@ export default function Weather(props) {
                             <Search />
                         </div>
                     </div>
-                    <div className="city_hour_day">
-                        <i className="fas fa-map-marker-alt" />
-                        <p id="city"> {props.cityDefault} </p>
-                        <p id="hour" />
-                        <p id="day" />
-                    </div>
+                    
+                    <FormatedCityandTime date={WeatherData.date} cityDefault="Lisbon"/>
+                    
                     <div className="row" id="square1">
                         <div className="col-8">
                             <img id="icon" alt="/" src={WeatherData.iconUrl}/>
@@ -74,3 +72,4 @@ export default function Weather(props) {
     }
 }
 
+export default Weather;

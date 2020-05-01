@@ -1,0 +1,15 @@
+.FormatedCityandTime {
+    margin-top: 70px;
+}
+
+.FormatedCityandTime .fa-map-marker-alt, #city, #time  {
+    display: inline;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+
+.FormatedCityandTime #date{
+    font-size: 20px;
+}
+

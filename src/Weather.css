@@ -18,21 +18,14 @@
     background-color: rgb(76, 146, 146);
 }
 
-.Weather #city, #hour, .fa-map-marker-alt {
-    display: inline;
-    font-size: 32px;
-    text-transform: uppercase;
-    margin-right: 8px;
-}
-
 .Weather .city_hour_day {
     margin-top: 70px;
 }
-  
-.Weather #day {
-    font-size: 20px;
-    margin-top: 8px;
+ 
+.Weather #city {
+    display: inline;
 }
+
 
 .Weather #square1 {
     position: relative;
