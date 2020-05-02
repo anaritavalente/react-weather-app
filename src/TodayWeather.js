@@ -4,7 +4,6 @@ import axios from 'axios';
 import CityandTime from './CityandTime';
 import WeatherInfo from './WeatherInfo';
 
-
 import './TodayWeather.css';
 
 function TodayWeather(props) {
@@ -13,17 +12,18 @@ function TodayWeather(props) {
     const apiKey = "bbfdbb35ce4efcbcbaa0fc30e630ce66";
     
     
+    
     function getWeather(response) {
         
         setWeatherData({
             ready: true,
-            date: new Date (response.data.dt*1000),
             city: response.data.name,
             temperature: response.data.main.temp, 
             wind: response.data.wind.speed, 
             humidity: response.data.main.humidity, 
             description: response.data.weather[0].description, 
-            icon: response.data.weather[0].icon
+            icon: response.data.weather[0].icon,
+            timezone: response.data.timezone
         });
     }
 
@@ -81,7 +81,7 @@ function TodayWeather(props) {
                             </form>
                         </div>
                     </div>
-                    <CityandTime date={WeatherData.date} city={WeatherData.city}/>
+                    <CityandTime info={WeatherData}/>
                     <WeatherInfo info={WeatherData} unit="celsius"/>
                 </div>
             </div>
