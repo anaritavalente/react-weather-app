@@ -26,6 +26,17 @@ function TodayWeather(props) {
         });
     }
 
+    function getMyLocation(position) {
+        let lat = position.coords.latitude;
+        let lon = position.coords.longitude;
+        let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+        axios.get(url).then(getWeather);
+    }
+    
+    function getPosition() {
+        navigator.geolocation.getCurrentPosition(getMyLocation);
+    }
+
     function search(event){
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(getWeather);
@@ -48,11 +59,11 @@ function TodayWeather(props) {
                     <h1 className="h1-todayweather"> How is the weather today? </h1>
                     <div className="row">
                         <div className="col-5" >
-                            <button
+                            <button 
                             type="button"
                             className="buttoncurrentcity"
                             id="current-position"
-                            >
+                            onClick={getPosition}>
                             Current Location
                             </button> 
                         </div>
