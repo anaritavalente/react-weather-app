@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 
 import CityandTime from './CityandTime';
+import WeatherInfo from './WeatherInfo';
 import Units from './Units';
 
 import './TodayWeather.css';
@@ -21,7 +22,7 @@ function TodayWeather(props) {
             wind: response.data.wind.speed, 
             humidity: response.data.main.humidity, 
             description: response.data.weather[0].description, 
-            iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+            icon: response.data.weather[0].icon
         });
     }
 
@@ -70,21 +71,7 @@ function TodayWeather(props) {
                     </div>
                     
                     <CityandTime date={WeatherData.date} city={WeatherData.city}/>
-                    
-                    <div className="row" id="square1">
-                        <div className="col-8">
-                            <img id="icon" alt="/" src={WeatherData.iconUrl}/>
-                            <p id="temp"> {Math.round(WeatherData.temperature)} ºC </p>
-                            <p id="description">{WeatherData.description}</p>
-                        </div>
-                        <div className="col-4">
-                            <i className="fas fa-tint"/>
-                            <span id="humidity" > {WeatherData.humidity} % </span>
-                            <br />
-                            <i className="fas fa-wind" />
-                            <span id="wind"> {Math.round(WeatherData.wind)} m/s </span>
-                        </div>
-                    </div>
+                    <WeatherInfo info={WeatherData}/>
                     <Units />
                 </div>
             </div>

@@ -13,8 +13,7 @@
     color: white;
 }
     
-.TodayWeather .buttoncurrentcity:hover,
-  .buttonsearch:hover {
+.TodayWeather .buttoncurrentcity:hover, .TodayWeather .buttonsearch:hover {
     background-color: rgb(76, 146, 146);
 }
 
@@ -38,42 +37,3 @@
     text-align: left;
 }
 
-.TodayWeather #square1 {
-    position: relative;
-    left: 15px;
-    width: 455px;
-    height: 155px;
-    background-color: rgb(76, 146, 146);
-    border-radius: 4px;
-}
-  
-.TodayWeather .todayweather .icon {
-    margin-left: 15px;
-}
-  
-.TodayWeather #temp {
-    display: inline;
-    position: relative;
-    top: 20px;
-    font-size: 60px;
-}
-  
-.TodayWeather #description {
-    margin-left: 15px;
-    text-transform: capitalize;
-}
-  
-.TodayWeather #humidity, #wind {
-    font-size: 18px;
-}
-  
-.TodayWeather .fa-tint, .fa-wind {
-    position: relative;
-    margin-right: 8px;
-    margin-top: 42px;
-    font-size: 22px;
-}
-  
-.TodayWeather .fa-wind {
-    margin-top: 12px;
-}
