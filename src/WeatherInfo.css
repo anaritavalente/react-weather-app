@@ -34,3 +34,17 @@
 .WeatherInfo .fa-wind {
     margin-top: 12px;
 }
+
+.WeatherInfo .Units {
+    margin-top: 30px;
+    font-size: 20px;
+}
+  
+.WeatherInfo .Units .active {
+    color: white;
+    cursor: default;
+}
+
+ .WeatherInfo .Units .active:hover {
+    text-decoration: none;
+}

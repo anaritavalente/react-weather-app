@@ -3,14 +3,15 @@ import axios from 'axios';
 
 import CityandTime from './CityandTime';
 import WeatherInfo from './WeatherInfo';
-import Units from './Units';
+
 
 import './TodayWeather.css';
 
 function TodayWeather(props) {
-    const [WeatherData, setWeatherData] = useState({ready: false});
     const [city, setCity]= useState(props.cityDefault);
+    const [WeatherData, setWeatherData] = useState({ready: false});
     const apiKey = "bbfdbb35ce4efcbcbaa0fc30e630ce66";
+    
     
     function getWeather(response) {
         
@@ -80,10 +81,8 @@ function TodayWeather(props) {
                             </form>
                         </div>
                     </div>
-                    
                     <CityandTime date={WeatherData.date} city={WeatherData.city}/>
-                    <WeatherInfo info={WeatherData}/>
-                    <Units />
+                    <WeatherInfo info={WeatherData} unit="celsius"/>
                 </div>
             </div>
         </div>
