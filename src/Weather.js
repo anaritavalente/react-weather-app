@@ -94,10 +94,10 @@ function Weather(props) {
                             </div>
                             <CityandTime info={WeatherData} />
                             <TodayWeather info={WeatherData} unit={unit}/>
+                            <div className="Units">
+                            <a href="/" id="celsius"  onClick={showCelsius}>ºC</a> | <a href="/" id="fahrenheit" onClick={showFahrenheit}>F</a>
                         </div>
-                        <div className="Units">
-                            <a href="/" id="celsius" className="active" onClick={showCelsius}>ºC</a> | <a href="/" id="fahrenheit" onClick={showFahrenheit}>F</a>
-                        </div>
+                        </div>  
                     </div>
                 </div>
                 <Forecast lat={WeatherData.lat} lon={WeatherData.lon} unit={unit} />

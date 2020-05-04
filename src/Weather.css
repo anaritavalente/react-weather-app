@@ -19,7 +19,7 @@
 
 .Weather .buttonsearch {
     position: relative;
-    left: 25px;
+    left: 27px;
     background-color: #37474f;
     border: transparent;
     border-radius: 5px;
@@ -42,11 +42,3 @@
     font-size: 20px;
 }
   
-.Weather .Units .active {
-    color: white;
-    cursor: default;
-}
-
-.Weather .Units .active:hover {
-    text-decoration: none;
-}
