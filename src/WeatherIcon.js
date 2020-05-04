@@ -1,5 +1,5 @@
 import React from 'react';
-import './WeatherIcon.css';
+
 import ReactAnimatedWeather from 'react-animated-weather';
 
 function WeatherIcon(props){
@@ -23,16 +23,29 @@ function WeatherIcon(props){
         "50d": "FOG",
         "50n": "FOG"
     };
-
-    return(
-        <div className="WeatherIcon">
-            <ReactAnimatedWeather
-                icon={codeMapping[props.iconCode]}
-                color={'white'}
-                size={70}
-                animate={true}
-            />
-        </div>
-    );
+    if (props.size === "small"){
+        return(
+            <div className="WeatherIcon">
+                <ReactAnimatedWeather
+                    icon={codeMapping[props.iconCode]}
+                    color={'white'}
+                    size={45}
+                    animate={true}
+                />
+            </div>
+        );
+    }
+    else {
+        return(
+            <div className="WeatherIcon">
+                <ReactAnimatedWeather
+                    icon={codeMapping[props.iconCode]}
+                    color={'white'}
+                    size={70}
+                    animate={true}
+                />
+            </div>
+        );
+    }
 }
 export default WeatherIcon;

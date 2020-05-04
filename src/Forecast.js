@@ -1,78 +1,47 @@
-import React from "react";
+import React, {useState} from "react";
+import NextDay from './NextDay';
+import axios from "axios";
+
 import './Forecast.css';
 
-function Forecast(){
-    return (
-        <div className="Forecast">
-            <div className="col-5">
-                <div className="row nextdays-block">
-                    <h1 className="h1-nextdaysweather">Next days</h1>
-                    <div className="col-7">
-                        <p id="day1" />
-                        <p className="forecast">
-                            <span id="max1" />
-                            <span>|</span>
-                            <span id="min1" />
-                        </p>
-                
-                        <p id="day2" />
-                        <p className="forecast">
-                            <span id="max2" />
-                            <span>|</span>
-                            <span id="min2" />
-                        </p>
-                
-                        <p id="day3" />
-                        <p className="forecast">
-                            <span id="max3" />
-                            <span>|</span>
-                            <span id="min3" />
-                        </p>
-                
-                        <p id="day4" />
-                        <p className="forecast">
-                            <span id="max4" />
-                            <span>|</span>
-                            <span id="min4" />
-                        </p>
-                
-                        <p id="day5" />
-                        <p className="forecast">
-                            <span id="max5" />
-                            <span>|</span>
-                            <span id="min5" />
-                        </p>
-                
-                        <p id="day6" />
-                        <p className="forecast">
-                            <span id="max6" />
-                            <span>|</span>
-                            <span id="min6" />
-                        </p>
-                    </div>
-                    <div className="col-5">
-                        <div className="row">
-                            <img id="icon1" alt="/" />
-                        </div>
-                        <div className="row">
-                            <img id="icon2" alt="/" />
-                        </div>
-                        <div className="row">
-                            <img id="icon3" alt="/" />
-                        </div>
-                        <div className="row">
-                            <img id="icon4" alt="/" />
-                        </div>
-                        <div className="row">
-                            <img id="icon5" alt="/" />
-                        </div>
-                        <div className="row">
-                            <img id="icon6" alt="/" />
-                        </div>
+function Forecast(props){
+    const apiKey = "fab5f60356d4f31a390522bd136e2a65";
+    const [loaded, setLoaded] = useState (false);
+    const [forecast, setForecast] = useState(null);
+    
+    function getForecast(response){
+        setForecast(response.data);
+        setLoaded(true);
+        console.log(forecast.lat);
+        console.log(props.lat);
+    }
+
+    function search(){
+       let forecast_api_URL=`https://api.openweathermap.org/data/2.5/onecall?lat=${props.lat}&lon=${props.lon}&appid=${apiKey}&units=metric`;
+       axios.get(forecast_api_URL).then(getForecast);
+    }
+
+    if (loaded && props.lat === forecast.lat && props.lon === forecast.lon){
+        return (
+            <div className="Forecast">
+                <div className="col-5">
+                    <div className="nextdays-block">
+                        <h1 className="h1-nextdaysweather">Next days</h1>
+                        <NextDay i={1} info={forecast} unit={props.unit} />
+                        <NextDay i={2} info={forecast} unit={props.unit} />
+                        <NextDay i={3} info={forecast} unit={props.unit} />
+                        <NextDay i={4} info={forecast} unit={props.unit} />
+                        <NextDay i={5} info={forecast} unit={props.unit} />
+                        <NextDay i={6} info={forecast} unit={props.unit} />
                     </div>
                 </div>
             </div>
-        </div>
-      );
+        );
     }
+    else  {
+        search();
+        return "Loading"
+    } 
+} 
+    
 export default Forecast;

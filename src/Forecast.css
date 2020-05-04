@@ -1,4 +1,4 @@
-.Forecast .col-5 .nextdays-block {
+.Forecast .nextdays-block {
     height: 550px;
     border: 1px solid #7fbbb3;
     border-radius: 2px;
@@ -16,39 +16,3 @@
     margin-bottom: 35px;
 }
 
-.Forecast #day1,
-  #day2,
-  #day3,
-  #day4,
-  #day5,
-  #day6 {
-    font-size: 17px;
-    margin-bottom: 2px;
-}
-  
-.Forecast .forecast {
-    margin-bottom: 20px;
-    color: #37474f;
-}
-  
-.Forecast #max1,
-  #max2,
-  #max3,
-  #max4,
-  #max5,
-  #max6 {
-    font-size: 17px;
-}
-  
-.Forecast #min1,
-  #min2,
-  #min3,
-  #min4,
-  #min5,
-  #min6 {
-    font-size: 12px;
-}
-  
-.Forecast .col-5 img {
-    width: 72px;
-}

@@ -1,0 +1,52 @@
+  
+.Weather .h1-todayweather {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.Weather .buttoncurrentcity {
+    background-color: #37474f;
+    border: transparent;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: white;
+}
+    
+.Weather .buttoncurrentcity:hover, .Weather .buttonsearch:hover {
+    background-color: rgb(76, 146, 146);
+}
+
+.Weather .buttonsearch {
+    position: relative;
+    left: 25px;
+    background-color: #37474f;
+    border: transparent;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: white;
+}
+  
+.Weather .entercity {
+    position: relative;
+    left: 20px;
+    width: 60%;
+    border: 1.5px solid rgb(76, 146, 146);
+    border-radius: 8px;
+    padding: 8px 8px;
+    text-align: left;
+}
+
+.Weather .Units {
+    margin-top: 30px;
+    font-size: 20px;
+}
+  
+.Weather .Units .active {
+    color: white;
+    cursor: default;
+}
+
+.Weather .Units .active:hover {
+    text-decoration: none;
+}

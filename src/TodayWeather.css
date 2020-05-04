@@ -1,40 +1,40 @@
-  
-.TodayWeather .h1-todayweather {
-    font-size: 30px;
-    text-transform: uppercase;
-    margin-bottom: 35px;
-}
-
-.TodayWeather .buttoncurrentcity {
-    background-color: #37474f;
-    border: transparent;
-    border-radius: 5px;
-    padding: 8px 10px;
-    color: white;
-}
-    
-.TodayWeather .buttoncurrentcity:hover, .TodayWeather .buttonsearch:hover {
+.TodayWeather #rectangle {
+    position: relative;
+    left: 15px;
+    top:10px;
+    width: 455px;
+    height: 155px;
     background-color: rgb(76, 146, 146);
-}
-
-.TodayWeather .buttonsearch {
-    position: relative;
-    left: 25px;
-    background-color: #37474f;
-    border: transparent;
-    border-radius: 5px;
-    padding: 8px 10px;
-    color: white;
+    border-radius: 4px;
 }
   
-.TodayWeather .entercity {
+.TodayWeather #temp {
+    display: inline;
     position: relative;
-    left: 20px;
-    width: 60%;
-    border: 1.5px solid rgb(76, 146, 146);
-    border-radius: 8px;
-    padding: 8px 8px;
-    text-align: left;
+    top: 20px;
+    font-size: 60px;
+}
+  
+.TodayWeather #description {
+    margin-left: 25px;
+    text-transform: capitalize;
+}
+  
+.TodayWeather #humidity, #wind {
+    font-size: 18px;
+}
+  
+.TodayWeather .fa-tint, .fa-wind {
+    position: relative;
+    margin-right: 8px;
+    margin-top: 42px;
+    font-size: 22px;
+}
+  
+.TodayWeather .fa-wind {
+    margin-top: 12px;
 }
 
-
+.TodayWeather .col-3 {
+    padding: 30px 0 0 30px;
+}
