@@ -29,7 +29,7 @@ function NextDay(props){
                         <p id="day"> {getDay()} </p>
                         <p className="forecast">
                             <span id="max"> {tempMax}ºC</span>
-                            <span>|</span> 
+                            <span> | </span> 
                             <span id="min"> {tempMin} ºC </span>
                         </p>
                     </div>

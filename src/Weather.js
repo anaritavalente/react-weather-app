@@ -64,8 +64,8 @@ function Weather(props) {
 
     if (WeatherData.ready) {
         return (
-            <div className="row">
-                <div className="Weather">
+            <div className="weather">
+                <div className="row">
                     <div className="col-7">
                         <div className="today-block">
                             <h1 className="h1-todayweather"> How is the weather today? </h1>
@@ -95,15 +95,21 @@ function Weather(props) {
                             <CityandTime info={WeatherData} />
                             <TodayWeather info={WeatherData} unit={unit}/>
                             <div className="Units">
-                            <a href="/" id="celsius"  onClick={showCelsius}>ºC</a> | <a href="/" id="fahrenheit" onClick={showFahrenheit}>F</a>
-                        </div>
+                                <a href="/" id="celsius"  onClick={showCelsius}>ºC</a> | <a href="/" id="fahrenheit" onClick={showFahrenheit}>F</a>
+                            </div>
                         </div>  
                     </div>
+                
+                    <div className="col-5">
+                        <div className="nextdays-block">
+                            <h1 className="h1-nextdaysweather">Next days</h1>
+                            <Forecast lat={WeatherData.lat} lon={WeatherData.lon} unit={unit} />
+                        </div>
+                    </div>
                 </div>
-                <Forecast lat={WeatherData.lat} lon={WeatherData.lon} unit={unit} />
             </div>
         );
-    }
+    }    
     else {
         search();
         return "Loading..."

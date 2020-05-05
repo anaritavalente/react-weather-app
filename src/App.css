@@ -3,18 +3,6 @@
     margin-top: 15px;
     color: white;
 }
-  
-.App .today-block {
-    height: 550px;
-    border: 1px solid #7fbbb3;
-    border-radius: 2px;
-    background-color: #7fbbb3;
-    color: white;
-    width: 540px;
-    margin: 10px 0 0 265px;
-    padding: 30px 40px;
-}
-   
 .App footer {
     margin: 7px 0 0 265px;
     color: #37474f;
