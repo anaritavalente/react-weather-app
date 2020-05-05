@@ -28,22 +28,31 @@ function Weather(props) {
         });
     }
 
+    async function handleError(url) {
+        try {
+          await axios.get(url).then(getWeather);
+
+        } catch (error) {
+            alert("Sorry, something went wrong. Please, try again!");
+        }
+    }
+
     function getMyLocation(position) {
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
         let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-        axios.get(url).then(getWeather);
+        handleError(url); 
     }
     
     function getPosition() {
         navigator.geolocation.getCurrentPosition(getMyLocation);
     }
 
-    function search(){
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-        axios.get(apiUrl).then(getWeather);
+    function search() {
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        handleError(url); 
     }
-    
+
     function handleSubmit(event) {
         event.preventDefault();
         search();
@@ -52,6 +61,7 @@ function Weather(props) {
     function input(event) {
         setCity(event.target.value);
     }
+
     function showCelsius(event) {
         event.preventDefault();
         setUnit("celsius");
